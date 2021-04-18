@@ -14,16 +14,15 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author JILL
  */
-public class Search extends javax.swing.JFrame {
+public class Searchsub extends javax.swing.JFrame {
 
     /**
-     * Creates new form Search
+     * Creates new form Searchsub
      */
-    public Search() {
+    public Searchsub() {
         initComponents();
     }
-    
-    public Search(String username) {
+    public Searchsub(String username) {
         initComponents();
         lbUsername.setText(username);
     }
@@ -41,8 +40,8 @@ public class Search extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         lbUsername = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        tfSender = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        tfSubject = new javax.swing.JTextField();
         btnView = new javax.swing.JButton();
         btnDashboard = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -54,10 +53,10 @@ public class Search extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 51, 0));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel1.setText("SEARCH");
 
-        lbUsername.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbUsername.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lbUsername.setText("username");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -65,25 +64,27 @@ public class Search extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(200, 200, 200)
-                .addComponent(lbUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
-                    .addComponent(lbUsername, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(lbUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Enter mail id of sender");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Enter Subject:");
 
         btnView.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnView.setText("VIEW");
@@ -103,13 +104,13 @@ public class Search extends javax.swing.JFrame {
 
         table1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Subject", "Body"
+                "Sender", "Subject", "Body"
             }
         ));
         jScrollPane1.setViewportView(table1);
@@ -119,36 +120,41 @@ public class Search extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tfSender)
-                    .addComponent(btnDashboard, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE))
-                .addGap(111, 111, 111))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 622, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(149, 149, 149)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfSubject, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(86, 86, 86)
+                                .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(168, 168, 168)
+                                .addComponent(btnDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 40, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfSender, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfSubject, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnView, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+                    .addComponent(btnView, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
                     .addComponent(btnDashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 30, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 48, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -163,52 +169,11 @@ public class Search extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
-        // TODO add your handling code here:
-        
-        String username = lbUsername.getText();
-        String sender = tfSender.getText();
-        
-        if(sender.isEmpty())
-        {
-            JOptionPane.showMessageDialog(this, "Enter sender mail id", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-        else{
-            try{
-            
-            
-            java.sql.Connection dbconn = DBConnection.connectDB();
-            PreparedStatement st =(PreparedStatement)
-                   dbconn.prepareStatement("Select subject, body from mails WHERE receiver = ? AND sender = ? ");
-            
-            
-            st.setString(1,username);
-            st.setString(2,sender);
-            ResultSet res=st.executeQuery();
-            
-            DefaultTableModel tm = (DefaultTableModel)table1.getModel();
-            
-            tm.setRowCount(0);
-            
-            while(res.next()){
-                Object o[]={res.getString("subject"),res.getString("body")};
-                tm.addRow(o);
-            }
-            
-            
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(this,e);
-        }
-        }
-        
-    }//GEN-LAST:event_btnViewActionPerformed
 
     private void btnDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashboardActionPerformed
         // TODO add your handling code here:
@@ -219,6 +184,45 @@ public class Search extends javax.swing.JFrame {
         d.setTitle("Dashboard");
         d.setVisible(true);
     }//GEN-LAST:event_btnDashboardActionPerformed
+
+    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+        // TODO add your handling code here:
+        String username = lbUsername.getText();
+        String subject = tfSubject.getText();
+        
+        if(subject.isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "Enter subject for serach", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            try{
+            
+            
+            java.sql.Connection dbconn = DBConnection.connectDB();
+            PreparedStatement st =(PreparedStatement)
+                   dbconn.prepareStatement("SELECT sender, subject, body FROM mails WHERE receiver = ? AND LOCATE(?,subject)");
+            
+            
+            st.setString(1,username);
+            st.setString(2,subject);
+            ResultSet res=st.executeQuery();
+            
+            DefaultTableModel tm = (DefaultTableModel)table1.getModel();
+            
+            tm.setRowCount(0);
+            
+            while(res.next()){
+                Object o[]={res.getString("sender"),res.getString("subject"),res.getString("body")};
+                tm.addRow(o);
+            }
+            
+            
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(this,e);
+        }
+        }
+    }//GEN-LAST:event_btnViewActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,20 +241,20 @@ public class Search extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Search.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Searchsub.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Search.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Searchsub.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Search.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Searchsub.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Search.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Searchsub.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Search().setVisible(true);
+                new Searchsub().setVisible(true);
             }
         });
     }
@@ -259,12 +263,12 @@ public class Search extends javax.swing.JFrame {
     private javax.swing.JButton btnDashboard;
     private javax.swing.JButton btnView;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbUsername;
     private javax.swing.JTable table1;
-    private javax.swing.JTextField tfSender;
+    private javax.swing.JTextField tfSubject;
     // End of variables declaration//GEN-END:variables
 }
