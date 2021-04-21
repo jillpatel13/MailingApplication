@@ -20,7 +20,7 @@ public class Inbox extends javax.swing.JFrame {
      * Creates new form Inbox
      */
     public Inbox() {
-        initComponents();
+        //initComponents();
     }
     public Inbox(String username) {
         initComponents();
@@ -178,8 +178,8 @@ public class Inbox extends javax.swing.JFrame {
                     .addComponent(tfsubject)
                     .addComponent(tfsender))
                 .addGap(29, 29, 29)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 33, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
+                .addGap(33, 33, 33))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -187,8 +187,8 @@ public class Inbox extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,7 +204,9 @@ public class Inbox extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         try{
-            
+            tfsender.setText("");
+            tfsubject.setText("");
+            tfbody.setText("");
             
             java.sql.Connection dbconn = DBConnection.connectDB();
             PreparedStatement st =(PreparedStatement)

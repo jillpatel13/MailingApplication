@@ -20,7 +20,7 @@ public class Search extends javax.swing.JFrame {
      * Creates new form Search
      */
     public Search() {
-        initComponents();
+        //initComponents();
     }
     
     public Search(String username) {

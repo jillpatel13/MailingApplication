@@ -20,7 +20,7 @@ public class Important extends javax.swing.JFrame {
      * Creates new form Archive
      */
     public Important() {
-        initComponents();
+        //initComponents();
     }
     public Important(String username) {
         initComponents();
@@ -202,7 +202,9 @@ public class Important extends javax.swing.JFrame {
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
         // TODO add your handling code here:
         try{
-            
+            tfsender.setText("");
+            tfsubject.setText("");
+            tfbody.setText("");
             
             java.sql.Connection dbconn = DBConnection.connectDB();
             PreparedStatement st =(PreparedStatement)

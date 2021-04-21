@@ -20,7 +20,7 @@ public class Sent extends javax.swing.JFrame {
      * Creates new form Sent
      */
     public Sent() {
-        initComponents();
+        //initComponents();
     }
     public Sent(String username) {
         initComponents();
@@ -219,7 +219,9 @@ public class Sent extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
             
-            
+            tfreceiver.setText("");
+            tfsubject.setText("");
+            tfbody.setText("");
             java.sql.Connection dbconn = DBConnection.connectDB();
             PreparedStatement st =(PreparedStatement)
                    dbconn.prepareStatement("Select receiver, subject, body from mails WHERE sender = ?");

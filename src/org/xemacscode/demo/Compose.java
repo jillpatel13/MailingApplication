@@ -234,10 +234,16 @@ public class Compose extends javax.swing.JFrame {
         String important= tfImportant.getText();
         String body = taBody.getText();
         
+        important.toLowerCase();
+        System.out.println(important.length());
         
         if(receiver.isEmpty() || subject.isEmpty() || important.isEmpty()|| body.isEmpty())
         {
             JOptionPane.showMessageDialog(this, "Fill all the fields and important feild should be yes/no", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        if(!(important.contains("yes")) && !(important.contains("no")) )
+        {
+            JOptionPane.showMessageDialog(this, "Important feild should be yes/no", "Error", JOptionPane.ERROR_MESSAGE);
         }
         else
         {
@@ -337,6 +343,10 @@ public class Compose extends javax.swing.JFrame {
                     int res2=st2.executeUpdate();
                     System.out.println("after");
                     JOptionPane.showMessageDialog(this, "mail sent", "Sucess", JOptionPane.INFORMATION_MESSAGE);
+                    tfReceiver.setText("");
+                    taSubject.setText("");
+                    tfImportant.setText("");
+                    taBody.setText("");
                 }
                 else{
                     JOptionPane.showMessageDialog(this, "Receiver does not exist", "Error", JOptionPane.ERROR_MESSAGE);

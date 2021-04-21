@@ -20,7 +20,7 @@ public class Searchsub extends javax.swing.JFrame {
      * Creates new form Searchsub
      */
     public Searchsub() {
-        initComponents();
+        //initComponents();
     }
     public Searchsub(String username) {
         initComponents();
